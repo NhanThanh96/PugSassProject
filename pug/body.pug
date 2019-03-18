@@ -1,0 +1,51 @@
+include navbar.pug
+include banner.pug
+include landing-section.pug
+include header-variant-section.pug
+include quote-section.pug
+include key-section.pug
+section.section
+    .container
+        .workflow
+            .column-6.workflow-left
+                h3.section__header Intuitive workflow
+                ul.workflow-left__list
+                    +icon_item("Speed up your development process with Gulp and BrowserSync live browser reload")
+                    +icon_item("Speed up your development process with Gulp and BrowserSync live browser reload")
+                    +icon_item("Speed up your development process with Gulp and BrowserSync live browser reload")
+                a.btn-outline--black(href="#") Documentation
+            .column-6.workflow-right
+                .img-effect
+                    img(src="images/47.jpg", alt="workflow image")
+section.section.bg-gray
+    .container
+        +section_top("Ultimate solution", "Easily create a website of any complexity with dozens of pages and independent components for any purpose.")
+        .solutions
+            .row
+                +solution("images/22.jpg","fas fa-2x fa-check", "Support pages", "Finish off your website with multiple support pages included into the package.")
+                +solution("images/22.jpg","fas fa-2x fa-check", "Support pages", "Finish off your website with multiple support pages included into the package.", true)
+                +solution("images/22.jpg","fas fa-2x fa-check", "Support pages", "Finish off your website with multiple support pages included into the package.")
+section.section
+    .container
+        +section_top("Pricing options", "Secure payment via Stripe or Paypal. 100% money back guarantee.")
+        .options
+            +option("Standard license", "$49.00")
+                ul
+                    +icon_item("Use for a single product")
+                    +icon_item("Non-paying users only")
+                    +icon_item("Read")
+                        a.link--orange(href="#") full description
+            +option("Standard license", "$49.00")
+                ul
+                    +icon_item("Use for a single product")
+                    +icon_item("Non-paying users only")
+                    +icon_item("Read")
+                        a.link--orange(href="#") full description
+section.section.bg-gray
+    .container
+        .download-section
+            .section__left
+                h3.section__header Download it from the Bootstrap marketplace
+                p.section__paragraph Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators. Six month technical support by the theme author is provided.
+            .section__right
+                a.btn-outline--black(href="#") purchase now

@@ -1,0 +1,90 @@
+mixin navlist() 
+    ul.navbar-nav.d-flex
+        each menu in menus
+            li.nav-item(
+            class= menu.submenu ? "dropdown" : ""
+            class= menu.active ? "active" : ""
+            )
+                a(href= menu.submenu ? "javascript:void(0)" : menu.url)= menu.name
+                    if(menu.submenu)
+                        i(class= 'fas fa-caret-down nav-item__icon--down')
+                if(menu.submenu)
+                    ul.dropdown-menu
+                        each sub in menu.submenu
+                            li.nav-item(
+                            class= sub.subrights ? "dropright" : ""
+                            )
+                                a(href= sub.subrights ? "javascript:void(0)" : "#")= sub.name
+                                    i(class= sub.subrights ? "fas fa-caret-right nav-item__icon--right" : "")
+                                if(sub.subrights)
+                                    ul.dropright-menu
+                                        each subright in sub.subrights
+                                            li.nav-item
+                                                a(href="#")= subright.name
+                                                if(subright)
+
+mixin nav_item_dropdown(itemText, href, active)
+    li(class= ['nav-item dropdown', active])
+        a()= itemText
+            i(class= 'fas fa-caret-down nav-item__icon')
+        block
+
+mixin nav_item_dropright(href, active)
+    li(class= ['nav-item dropright', active])
+        a(href=href)
+            block
+            i(class= 'fas fa-caret-right ')
+
+mixin nav_item(href, active)
+    li(class= ['nav-item', active])
+        a(href= href)
+            block
+
+mixin section_top(header, paragraph, hide, whiteText)
+    .section__top
+        if(whiteText)
+            h3.section__header.white-text= header
+        else
+            h3.section__header= header
+        if(hide)
+            p.section__paragraph.text-hide= paragraph
+        else
+            p.section__paragraph= paragraph
+
+
+mixin thumbnail({imageUrl, title, summary, isNew})
+    div.column-4.thumnail
+        a(href="#")
+            img.thumbnail__img(src= imageUrl, alt=title)
+            .thumbnail__content
+                h4.thumbnail__title= title 
+                    if isNew
+                        span.new New!
+                p.thumbnail__summary= summary
+mixin feature({icon, title, content})
+    div.column-4.feature
+        .feature__icon 
+            span
+                i(class= icon)
+        h4.feature__title= title
+        p.feature__content= content
+
+mixin solution(imageName, icon, title, paragraph, bigger)
+    .column-4.solution(class= bigger ? "solution--bigger" : "")
+        .bg-overlay
+        img(src= imageName, alt="solution image")
+        .solution__content
+            .solution__icon
+                i(class= icon)
+            h4.solution__title= title
+            p.solution__paragraph= paragraph
+
+mixin option(title, price)
+    .option
+        h4.option__title= title
+        h5.option__price= price
+        block
+        a.btn-outline--black(href="#") purchase now
+mixin icon_item(content)
+    li.icon-item= content
+        block

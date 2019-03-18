@@ -1,0 +1,119 @@
+-
+  var menus = [
+    {
+        name : "welcome",
+        url  : "welcome.html",
+        active : true,
+        submenu : [
+            {
+                name : "Header : Image"
+            },
+            {
+                name : "Header : Image"
+            },
+            {
+                name : "Header : Image"
+            },
+            {
+                name : "Header : Image"
+            }
+        ]
+    },
+    {
+        name : "Langdings",
+        url  : "langding.html",
+        active : false,
+        submenu : [
+            {
+                name : "App"
+            },
+            {
+                name : "Company"
+            },
+            {
+                name : "Header : Image"
+            },
+            {
+                name : "Header : Image"
+            }
+        ]
+    },
+    {
+            name : "Langdings",
+            url  : "langding.html",
+            active : false,
+            submenu : [
+                    {
+                    name : "App"
+                },
+                    {
+                    name : "Company"
+                },
+                    {
+                    name : "Header : Image"
+                },
+                    {
+                    name : "Header : Image"
+                }
+            ]
+            },
+            {
+                name : "page",
+                url  : "page.html",
+                active : false,
+                submenu : [
+                        {
+                        name : "Header : Image",
+                        subrights :  [
+                            {
+                                name : "Blog",
+                            },
+                                {
+                                name  : "Post"
+                            }
+                        ]
+                    },
+                        {
+                        name : "Header : Image",
+                        subrights :  [
+                                {
+                                name : "Blog",
+                            },
+                                {
+                                name  : "Post"
+                            }
+                        ]
+                    },
+                        {
+                        name : "Header : Image"
+                    },
+                        {
+                        name : "Header : Image"
+                    }
+                ]
+            },
+     
+   ];
+   
+mixin navlist() 
+    ul.navbar-nav.d-flex
+        each menu in menus
+            li.nav-item(
+            class= menu.submenu ? "dropdown" : ""
+            class= menu.active ? "active" : ""
+            )
+            a(href= menu.url)= menu.name
+                if(menu.submenu)
+                    i(class= 'fas fa-caret-down nav-item__icon')
+            if(menu.submenu)
+                ul.dropdown-menu
+                    each sub in menu.submenu
+                        li.nav-item
+                            a(href="#")= sub.name
+                            if(sub.subrights)
+                                ul.dropright-menu
+                                    each subright in sub.subrights
+                                        li.nav-item
+                                            a(href="#")= subright.name
+                                            
++navlist()

@@ -1,0 +1,31 @@
+-
+    var featureArr = [{
+                        icon : "fas fa-tv", 
+                        title  :  "Fully responsive", 
+                        content  :  "Looks great on all major browsers, tablets and mobile devices."
+                    },
+                    { 
+                        icon : "fas fa-tv", 
+                        title  :  "Fully responsive", 
+                        content  :  "Looks great on all major browsers, tablets and mobile devices."
+                    },
+                    {   icon : "fas fa-tv", 
+                        title  :  "Fully responsive", 
+                        content  :  "Looks great on all major browsers, tablets and mobile devices."
+                    }
+                ];
+
+section.section.bg-dark
+            .container
+                +section_top("Key theme features", "Incline can be used to create anything from a small marketing page to a sophisticated website.", "", "white")
+                .row.features
+                    each val in featureArr
+                        +feature({
+                            icon : val.icon, 
+                            title  : val.title, 
+                            content  : val.content
+                        })
+                    
+                    //- +feature("<i class='fas fa-tv'></i>", "Fully responsive", "Looks great on all major browsers, tablets and mobile devices.")
+                    //- +feature("<i class='fas fa-tv'></i>", "Fully responsive", "Looks great on all major browsers, tablets and mobile devices.")
+                    //- +feature("<i class='fas fa-tv'></i>", "Fully responsive", "Looks great on all major browsers, tablets and mobile devices.")

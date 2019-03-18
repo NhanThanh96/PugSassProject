@@ -1,0 +1,35 @@
+- 
+  var headerArr = [
+                    {
+                        imageUrl : "images/46.png",
+                        title     :  "App landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                     {
+                        imageUrl : "images/91.png",
+                        title     :  "Company landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : true,
+                    },
+                     {
+                        imageUrl : "images/43.png",
+                        title     :  "Fullpage scrolling",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                  ];
+
+
+section.section.bg-gray
+            div.line-top
+            .container
+                +section_top("Header variants", "Polish your landing page with one of the header options below to impress your visitors at first glance.")
+                .row.thumbnails
+                    each val in headerArr
+                        +thumbnail({
+                            imageUrl :  val.imageUrl,
+                            title     :  val.title,
+                            summary   :   val.summary,
+                            isNew      : val.isNew,
+                        })

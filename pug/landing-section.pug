@@ -1,0 +1,63 @@
+- 
+  var landingArr = [
+                    {
+                        imageUrl : "images/45.png",
+                        title     :  "App landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                     {
+                        imageUrl : "images/90.png",
+                        title     :  "Company landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : true,
+                    },
+                     {
+                        imageUrl : "images/57.png",
+                        title     :  "Fullpage scrolling",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                    {
+                        imageUrl : "images/44.png",
+                        title     :  "Product landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                    {
+                        imageUrl : "images/46.png",
+                        title     :  "Real estate landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : false,
+                    },
+                    {
+                        imageUrl : "images/91.png",
+                        title     :  "Restaurant landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : true,
+                    },
+                    {
+                        imageUrl : "images/43.png",
+                        title     :  "Restaurant landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : true,
+                    },
+                    {
+                        imageUrl : "images/43.png",
+                        title     :  "Restaurant landing",
+                        summary   :   "You can use this page to promote your web or mobile application.",
+                        isNew      : true,
+                    },
+                  ];
+
+section.section
+    +section_top("Landing page variants", "Incline comes with several professionally designed landing pages that can be easily adapted for any project.")
+    .container
+        .row.thumbnails
+            each val in landingArr
+                +thumbnail({
+                    imageUrl :  val.imageUrl,
+                    title     :  val.title,
+                    summary   :   val.summary,
+                    isNew      : val.isNew,
+                })

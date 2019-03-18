@@ -151,10 +151,11 @@ nav.fixed {
      }
     
   .navbar .navbar-nav .dropdown-menu {
-    display: none;
-    transition: display 1s;
+    display: none;  
+    transition: all 3s linear;  
     position: absolute;
     z-index: 1000;
+ 
   }
   .dropdown-menu > .nav-item a {
     width: 200px;
@@ -166,8 +167,9 @@ nav.fixed {
     display: inline-block;
     background: #fff;
   }
-  .navbar-nav .dropdown > ul.show {
+  .navbar-nav .dropdown > .dropdown-menu.show {
     display: block;
+ 
     }
   .dropdown-menu .nav-item a {
     position: relative;

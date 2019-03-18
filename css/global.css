@@ -270,7 +270,9 @@ nav.fixed {
     background-color: #dc3545;
     font-size: 75%;
     font-weight: 700;
-    padding: .25em .4em; }
+    padding: .25em .4em; 
+    margin-left: 5px;
+  }
 
 .line-top {
   position: absolute;

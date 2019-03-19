@@ -50,8 +50,12 @@ p {
   line-height: 25px;
   color: #6c757d; }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/Objective-Regular.woff2); }
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400; }
 
 html, body {
@@ -126,7 +130,7 @@ html, body {
     display: flex;
     align-items: center; }
     .navbar .navbar-nav:last-of-type {
-      margin-left: 10rem; }
+      margin-left: 8rem; }
     .navbar .navbar-nav .nav-item > a {
       padding: 1rem;
       display: inline-block;

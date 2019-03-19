@@ -1,0 +1,62 @@
+.workflow {
+    display: flex;
+    align-items: center;
+}
+.icon-item {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    line-height: 25px;
+    &::before {
+        font-family: Font Awesome\ 5 Free;
+        font-weight: 900;
+        margin-right: 1em;
+        content: "\f105";
+        color: #f5ba4b;
+    }
+    a {
+        margin-left: 6px;
+    }
+}
+.workflow-left {
+    margin-left: 100px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.btn-outline--orange {
+    color: #fff;
+    display: inline-block;
+    padding: 18px 20px;
+    border: 1px solid #f5ba4b;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+.btn-outline--black {
+    @include btnOutline(#000, #f5ba4b);
+}
+.workflow-right {
+    padding-right: 100px;
+    box-sizing: border-box;
+    .img-effect {
+        position: relative;
+        padding-left: 20%;
+        padding-right: 10%;
+        &::before {
+            position: absolute;
+            top: 35%;
+            right: 0;
+            bottom: 15%;
+            left: 0;
+            z-index: -1;
+            content: "";
+            background-color: #f7c86f;
+        }
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+            z-index: 1;
+            box-shadow: 0 25px 100px -5px rgba(0, 0, 0, 0.15);
+        }
+    }
+}

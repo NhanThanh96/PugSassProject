@@ -1,7 +1,10 @@
 doctype html
 html(lang="en")
-    include pug/head.pug
+    head
+        include pug/head.pug
+        include pug/mixins.pug
+        include pug/variables.pug
     body
         include pug/body.pug
         include pug/footer.pug
-include pug/script.pug
+        include pug/script.pug

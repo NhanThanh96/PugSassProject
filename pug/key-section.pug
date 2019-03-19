@@ -17,7 +17,11 @@
 
 section.section.bg-dark
             .container
-                +section_top("Key theme features", "Incline can be used to create anything from a small marketing page to a sophisticated website.", "", "white")
+                +section_top({
+                    header : "Key theme features", 
+                    paragraph : "Incline can be used to create anything from a small marketing page to a sophisticated website.",
+                    whiteText : "white"
+                })
                 .row.features
                     each val in featureArr
                         +feature({

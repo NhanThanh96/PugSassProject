@@ -65,7 +65,26 @@ $(document).ready(function(){
         $(this).next().toggleClass("shown");
         $(this).next().slideToggle(250);
     }
-  });
+  } 
+  );
+
+//   $(".dropdown > a").hover(
+//     function (e) {
+//       e.preventDefault();
+//           $(this).parents(".navbar-nav").find(".dropdown-menu").removeClass("shown"); //remove all //remove all
+//           // $(this).parents(".navbar-nav").find(".dropdown-menu").slideUp(250);
+//           $(this).next().addClass("shown");
+//           $(this).next().slideDown(250);
+      
+//     },
+//     function () {
+      
+//       $(this).next().removeClass("shown");
+//       $(this).next().slideUp(250);
+//     }
+// );
+
+
   //   $(".navbar-nav > .nav-item.dropdown > a").click(function(){
   //       $(this).parents(".navbar-nav").find(".dropdown-menu").removeClass("show"); //remove all
   //       $(this).parent().find(".dropdown-menu").toggleClass("show");
@@ -86,6 +105,24 @@ $(document).ready(function(){
         $(this).next().slideToggle(150);
       }
     });
+
+    // $(".dropright > a").hover(
+    //   function (e) {
+    //     e.preventDefault();
+        
+    //     $(this).parents(".dropdown-menu").find(".dropright-menu").removeClass("shown"); //remove all //remove all
+    //     // $(this).parents(".dropdown-menu").find(".dropright-menu").slideUp(150);
+    //     $(this).next().toggleClass("shown");
+    //     $(this).next().slideToggle(150);
+        
+    //   },
+    //   function () {
+    //     $(this).next().removeClass("shown");
+    //     $(this).next().slideUp(150);
+    //   }
+  // );
+
+
   //   $(".navbar-nav > .nav-item.dropdown > ul.dropdown-menu > .nav-item.dropright > a").click(function(){
   //     $(this).parents(".dropdown-menu").find(".dropright-menu").removeClass("show");  
   //     $(this).parent().find(".dropright-menu").toggleClass("show");

@@ -1,0 +1,15 @@
+.feature {
+    text-align: center;
+    .feature__icon {
+        margin-bottom: 1.5rem;
+        span > i {
+            color: #f5ba4b;
+            font-size: 25px;
+        }
+    }
+    .feature__title {
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+}

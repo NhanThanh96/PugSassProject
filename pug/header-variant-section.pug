@@ -24,7 +24,10 @@
 section.section.bg-gray
             div.line-top
             .container
-                +section_top("Header variants", "Polish your landing page with one of the header options below to impress your visitors at first glance.")
+                +section_top({
+                    header : "Header variants", 
+                    paragraph : "Polish your landing page with one of the header options below to impress your visitors at first glance."
+                    })
                 .row.thumbnails
                     each val in headerArr
                         +thumbnail({

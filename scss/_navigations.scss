@@ -1,0 +1,142 @@
+// navbar 
+
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    transition: background-color 0.3s;
+    .navbar-content {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 1.5rem 30px;
+        border-bottom: 1px solid  rgba(247, 244, 245, 0.4);
+    }
+    .logo {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .nav-item-devider {
+        span {
+            border-left: 1px solid #fff;
+            padding: 0 0.7rem;
+        }
+    
+    }
+    .menu {
+        & > .nav-item {
+            &:last-child {
+                &:before {
+                    content: "|";
+                    margin: 0 1rem;
+                    color: #fff;
+                }
+            }
+        } 
+    }
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        &:first-of-type {
+            // margin-right: 4rem;
+        }
+        &:last-of-type {
+            margin-left: 8rem;
+        }
+        .nav-item {
+            & > a {
+                padding: 1rem;
+                display: inline-block;
+                font-size: 13px;
+                text-transform: uppercase;
+                @include navbarText(#fff);
+                font-weight: 500;
+                &.active {
+                    color: #f5ba4b;
+                }
+                &:hover {
+                    color: #f5ba4b;
+                }
+                .nav-item__icon--down {
+                    margin-left : 5px;
+                }
+            }
+        }
+        .dropdown-menu {
+            display: none;  
+            position: absolute;
+            z-index: 1000;
+            & > .nav-item {
+                a {
+                    width: 200px;
+                    padding: 1rem 1.5rem;
+                    white-space: nowrap;
+                    border-top: 1px solid rgba(0,0,0,.1);
+                    border-right: 1px solid rgba(0,0,0,.1);
+                    border-left: 1px solid rgba(0,0,0,.1);
+                    display: inline-block;
+                    background: #fff;
+                    position: relative;
+                    color: #000;
+                    &.active {
+                        color: #f5ba4b;
+                    }
+                    &:hover {
+                        background-color: #f8f9fa; 
+                    }
+                    .nav-item__icon--right {
+                        position: absolute;
+                        right: 10%;
+                    }
+                }
+            }
+        }
+    }
+    .dropright {
+        position: relative;
+        & > .dropright-menu {
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            right: -102%;
+            top: 1%;
+        }
+    }
+}
+nav.fixed {
+    position: fixed;
+    width: 100%;
+    z-index : 1000;
+    background-color: #fff; 
+    margin: 0;
+    .logo {
+        color: #000;
+    }
+    .menu {
+        li {
+            &.nav-item {
+                a {
+                    color: #000;
+                 }
+                 &:last-child {
+                    &:before {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-nav {
+        li {
+            a {
+                &.nav-link {
+                    color: #000;
+                }
+            }
+        }
+        .nav-item-devider span {
+            border-left: 1px solid #000;
+        }
+    }
+}

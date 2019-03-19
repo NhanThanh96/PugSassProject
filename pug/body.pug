@@ -19,7 +19,10 @@ section.section
                     img(src="images/47.jpg", alt="workflow image")
 section.section.bg-gray
     .container
-        +section_top("Ultimate solution", "Easily create a website of any complexity with dozens of pages and independent components for any purpose.")
+        +section_top({
+            header : "Ultimate solution" , 
+            paragraph : "Easily create a website of any complexity with dozens of pages and independent components for any purpose."
+        })
         .solutions
             .row
                 +solution("images/22.jpg","fas fa-2x fa-check", "Support pages", "Finish off your website with multiple support pages included into the package.")
@@ -27,7 +30,10 @@ section.section.bg-gray
                 +solution("images/22.jpg","fas fa-2x fa-check", "Support pages", "Finish off your website with multiple support pages included into the package.")
 section.section
     .container
-        +section_top("Pricing options", "Secure payment via Stripe or Paypal. 100% money back guarantee.")
+        +section_top({
+            header :  "Pricing options", 
+            paragraph : "Secure payment via Stripe or Paypal. 100% money back guarantee."
+        })
         .options
             +option("Standard license", "$49.00")
                 ul

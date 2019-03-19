@@ -1,0 +1,22 @@
+.quote {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    &:before {
+        font-family: Font Awesome\ 5 Free;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.5;
+        min-width: 2.5rem;
+        content: "\f10d";
+    }
+    .quote__content {
+        font-size: 18px;
+        color: #000;
+        line-height: 36px;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+   
+}
+}

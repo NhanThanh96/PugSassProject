@@ -1,0 +1,41 @@
+.options {
+    display: flex;
+    justify-content: center;
+    .option {
+        box-sizing: border-box;
+        width: 350px;
+        padding: 3.5rem 2.5rem;
+        border: 1px solid rgba(0,0,0,.1);
+        &:first-of-type {
+            border-top: 2px solid #f5ba4b;
+            margin-right: 50px;
+        }
+        .option__title {
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+.option__price {
+    text-align: center;
+    font-size: 22px;
+    color: #f5ba4b;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+//   download section
+.download-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .section__left  {
+        margin-right: 25px;
+        width: 65%;
+    }
+    .section__paragraph {
+        margin-bottom: 0;
+    }
+}

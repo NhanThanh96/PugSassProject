@@ -12,8 +12,7 @@ mixin navlist()
                     ul.dropdown-menu
                         each sub in menu.submenu
                             li.nav-item(
-                            class= sub.subrights ? "dropright" : ""
-                            )
+                            class= sub.subrights ? "dropright" : "")
                                 a(href= sub.subrights ? "javascript:void(0)" : "#")= sub.name
                                     i(class= sub.subrights ? "fas fa-caret-right nav-item__icon--right" : "")
                                 if(sub.subrights)
@@ -40,7 +39,7 @@ mixin nav_item(href, active)
         a(href= href)
             block
 
-mixin section_top(header, paragraph, hide, whiteText)
+mixin section_top({header, paragraph, hide, whiteText})
     .section__top
         if(whiteText)
             h3.section__header.white-text= header

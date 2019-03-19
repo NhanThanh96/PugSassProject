@@ -1,5 +1,5 @@
 mixin navlist() 
-    ul.navbar-nav.d-flex
+    ul.navbar-nav.d-flex.menu
         each menu in menus
             li.nav-item(
             class= menu.submenu ? "dropdown" : ""
@@ -54,8 +54,18 @@ mixin section_top(header, paragraph, hide, whiteText)
 
 mixin thumbnail({imageUrl, title, summary, isNew})
     div.column-4.thumnail
-        a(href="#")
-            img.thumbnail__img(src= imageUrl, alt=title)
+        a(
+            href="#"
+            class= imageUrl ? "" : "bg-overlay--gray"
+            )
+            if imageUrl
+                img.thumbnail__img(
+                    src= imageUrl  ,
+                    alt=title,
+                    class= imageUrl
+                    )
+            else 
+                span.comming-soon
             .thumbnail__content
                 h4.thumbnail__title= title 
                     if isNew

@@ -1,18 +1,6 @@
 $(document).ready(function(){
     
         window.setTimeout(function () {
-            // $(".banner .banner__author").animate({
-            //     opacity: '1',
-            // }, "slow");
-            // $(".banner .banner__title").animate({
-            //     opacity: '1',
-            // }, "slow");
-            // $(".banner .banner__paragraph").animate({
-            //     opacity: '1',
-            // }, "slow");
-            // $(".banner .banner__link ").animate({
-            //     opacity: '1',
-            // }, "slow");
             $(".banner__content").children().each(function(i) {
                 $(this).delay(300 * i).fadeIn(500);
             });
